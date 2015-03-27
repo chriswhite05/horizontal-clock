@@ -1,0 +1,37 @@
+@import "../global.scss";
+
+
+html, body { width: 100%; padding:0; margin: 0; }
+
+
+.clock-container { 
+
+	width: 100%;
+	background: $black;
+	height: 300px;
+
+
+	.time-bar {
+		width: 0px;
+		height: 100px;
+		line-height: 100px;
+		color: $black;
+		@include border-radius-separate(0px, 50px, 50px, 0px);
+		
+		span { 
+			margin-left: 50px;
+			font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 24px;
+ 
+		}
+		
+	}
+	
+	
+	.clock-hours { background: $red; }
+	
+	.clock-minutes { background: $green; }
+	
+	.clock-seconds { background: $blue; }
+
+}

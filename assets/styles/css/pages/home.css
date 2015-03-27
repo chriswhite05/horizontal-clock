@@ -1,0 +1,36 @@
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.clock-container {
+  width: 100%;
+  background: #101510;
+  height: 300px; }
+  .clock-container .time-bar {
+    width: 0px;
+    height: 100px;
+    line-height: 100px;
+    color: #101510;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 50px;
+    -moz-border-top-right-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-border-bottom-right-radius: 50px;
+    -moz-border-bottom-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+    .clock-container .time-bar span {
+      margin-left: 50px;
+      font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 24px; }
+  .clock-container .clock-hours {
+    background: #fd1f23; }
+  .clock-container .clock-minutes {
+    background: #a2fe36; }
+  .clock-container .clock-seconds {
+    background: #2de5f6; }
