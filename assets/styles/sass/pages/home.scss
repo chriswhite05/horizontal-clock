@@ -1,37 +1,64 @@
 @import "../global.scss";
 
 
-html, body { width: 100%; padding:0; margin: 0; }
+html, body { width: 100%; padding:0; margin: 0; font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+
+header {
+	margin: 30px 0;
+	text-align: center;
+	
+	h1 { font-size: 26px; font-weight: bold; }
+}
 
 .clock-container { 
 
-	width: 100%;
-	background: $black;
+	width: 60%;
+	padding: 2% 15%;
+	margin: 50px auto;
+	background: #2a2a2a;
 	height: 300px;
 
 
 	.time-bar {
-		width: 0px;
+		position: relative;
+		min-width: 105px;
 		height: 100px;
 		line-height: 100px;
 		color: $black;
-		@include border-radius-separate(0px, 50px, 50px, 0px);
+		margin-bottom: 2px;
+		@include border-radius-separate(50px, 50px, 50px, 50px);
 		
-		span { 
-			margin-left: 50px;
-			font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		
+		span.title { font-size: 18px; width: 80px; display: inline-block; text-transform: uppercase; position: relative;
+			left: -100px;}
+		
+		span.digits { 
+			display: inline-block;
 			font-size: 24px;
- 
+ 			position: relative;
+ 			left: -40px; 
 		}
 		
 	}
 	
 	
-	.clock-hours { background: $red; }
+	.clock-hours { 
+		
+		.title { color: $red; }
 	
-	.clock-minutes { background: $green; }
+		@include background-gradient($red, $red2, 'horizontal'); 
+	}
 	
-	.clock-seconds { background: $blue; }
+	.clock-minutes { @include background-gradient($green, $green2, 'horizontal');
+		
+		.title { color: $green; }
+	}
+	
+	.clock-seconds { @include background-gradient($blue, $blue2, 'horizontal'); 
+		
+		.title { color: $blue; }
+	}
 
 }

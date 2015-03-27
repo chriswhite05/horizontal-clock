@@ -1,13 +1,10 @@
 
-
-window.onload=function(){
-
 	var hourBar = document.getElementsByClassName("clock-hours")[0];
-	var hourTime = document.getElementsByClassName("clock-hours")[0].getElementsByTagName("span")[0];
+	var hourTime = document.getElementsByClassName("clock-hours")[0].getElementsByClassName("digits")[0];
 	var minuteBar = document.getElementsByClassName("clock-minutes")[0];
-	var minuteTime = document.getElementsByClassName("clock-minutes")[0].getElementsByTagName("span")[0];
+	var minuteTime = document.getElementsByClassName("clock-minutes")[0].getElementsByClassName("digits")[0];
 	var secondBar = document.getElementsByClassName("clock-seconds")[0];
-	var secondTime = document.getElementsByClassName("clock-seconds")[0].getElementsByTagName("span")[0];
+	var secondTime = document.getElementsByClassName("clock-seconds")[0].getElementsByClassName("digits")[0];
 
 	var time;
 	var hoursWidth;
@@ -16,7 +13,6 @@ window.onload=function(){
 	var hours;
 	var minutes;
 	var seconds;
-
 
 
 	updateClock();
@@ -40,7 +36,6 @@ function updateClock() {
 	secondsWidth = (seconds / 60) * 100;
 
 	
-	
 	hourBar.style.width = hoursWidth + "%";
 	minuteBar.style.width = minutesWidth + "%";
 	secondBar.style.width = secondsWidth + "%";
@@ -48,9 +43,3 @@ function updateClock() {
 
 	setTimeout(updateClock, 500);
 }
-
-
-}
-
-
-
